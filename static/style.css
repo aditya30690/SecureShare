@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    min-height:100vh;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.hero{
+    text-align:center;
+    margin-top:100px;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:20px;
+    color:#cbd5e1;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 30px;
+    background:#38bdf8;
+    color:black;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.card{
+    width:400px;
+    margin:80px auto;
+    padding:30px;
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+}
+
+.card h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#38bdf8;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.dashboard{
+    padding:50px;
+}
+
+.dashboard h1{
+    margin-bottom:20px;
+}
+
+.upload-box{
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    margin-top:20px;
+}
+
+.success-container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.success-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    width:500px;
+    box-shadow:0px 0px 30px rgba(0,0,0,0.3);
+}
+
+.checkmark{
+    font-size:70px;
+    color:#22c55e;
+    margin-bottom:20px;
+}
+
+.success-card h1{
+    margin-bottom:20px;
+}
+
+.filename{
+    color:#cbd5e1;
+    margin-bottom:25px;
+    word-wrap:break-word;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+}
+
+.file-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+    margin-top:15px;
+    background:rgba(255,255,255,0.05);
+    border-radius:10px;
+}
+
+.file-row span{
+    max-width:70%;
+    word-break:break-word;
+}
+
+.btn{
+    margin-left:10px;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>SecureShare Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="logo">
+        ☁ SecureShare
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+    </div>
+
+</div>
+
+<div class="dashboard">
+
+    <h1>SecureShare Cloud Dashboard</h1>
+
+    <p style="color:#cbd5e1;margin-bottom:30px;">
+        Secure Cloud-Based File Transfer & Management System
+    </p>
+
+    <div style="display:flex;gap:20px;flex-wrap:wrap;">
+
+        <div class="upload-box" style="flex:1;min-width:250px;">
+            <h2>📁 Total Files</h2>
+            <h1>{{ files|length }}</h1>
+        </div>
+
+        <div class="upload-box" style="flex:1;min-width:250px;">
+            <h2>☁ Cloud Database</h2>
+            <h3>MongoDB Atlas Connected</h3>
+        </div>
+
+    </div>
+
+    <div class="upload-box">
+
+        <h2>📤 Upload New File</h2>
+
+        <form action="/upload"
+              method="POST"
+              enctype="multipart/form-data">
+
+            <input type="file"
+                   name="file"
+                   required>
+
+            <br><br>
+
+            <button type="submit">
+                Upload File
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="upload-box">
+
+        <h2>📄 Uploaded Files</h2>
+
+        {% if files %}
+
+            {% for file in files %}
+
+            <div class="file-row">
+
+                <span>
+                    📄 {{ file }}
+                </span>
+
+                <div>
+
+                    <a href="/download/{{ file }}"
+                       class="btn"
+                       style="background:#22c55e;color:white;">
+                        Download
+                    </a>
+
+                    <a href="/delete/{{ file }}"
+                       class="btn"
+                       style="background:#ef4444;color:white;">
+                        Delete
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        {% else %}
+
+            <p>No files uploaded yet.</p>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

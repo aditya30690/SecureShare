@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Success</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="success-container">
+
+    <div class="success-card">
+
+        <div class="checkmark">
+            ✓
+        </div>
+
+        <h1>File Uploaded Successfully</h1>
+
+        <p class="filename">
+            {{ filename }}
+        </p>
+
+        <a href="/dashboard" class="btn">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
