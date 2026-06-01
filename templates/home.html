@@ -1,35 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SecureShare</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
 <nav class="navbar">
-    <div class="logo">SecureShare</div>
+
+    <div class="logo">
+        ☁ SecureShare
+    </div>
 
     <div class="nav-links">
         <a href="/">Home</a>
         <a href="/login">Login</a>
         <a href="/register">Register</a>
     </div>
+
 </nav>
 
-<div class="hero">
+<section class="hero">
 
-    <h1>Secure File Transfer</h1>
+    <div class="hero-text">
 
-    <p>
-        Cloud-Based SaaS Platform for Secure File Upload,
-        Storage and Sharing
-    </p>
+        <h1>
+            Secure Cloud
+            <span>File Transfer</span>
+        </h1>
 
-    <a href="/register" class="btn">
-        Get Started
-    </a>
+        <p>
+            Upload, Store and Manage Files Securely
+            with Cloud Technology and MongoDB Atlas.
+        </p>
 
-</div>
+        <div class="buttons">
+
+            <a href="/register" class="btn">
+                Get Started
+            </a>
+
+            <a href="/login" class="btn2">
+                Login
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-card">
+
+        <div class="glass-card">
+            ☁ Cloud Storage
+        </div>
+
+        <div class="glass-card">
+            🔒 Secure Transfer
+        </div>
+
+        <div class="glass-card">
+            ⚡ Fast Access
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats">
+
+    <div class="stat">
+        <h2>99.9%</h2>
+        <p>Uptime</p>
+    </div>
+
+    <div class="stat">
+        <h2>24/7</h2>
+        <p>Access</p>
+    </div>
+
+    <div class="stat">
+        <h2>100%</h2>
+        <p>Secure</p>
+    </div>
+
+</section>
+
+<section class="features">
+
+    <div class="feature">
+        <h3>☁ Cloud Storage</h3>
+        <p>Store files securely in the cloud.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🔒 Security</h3>
+        <p>Protected upload and download.</p>
+    </div>
+
+    <div class="feature">
+        <h3>⚡ Speed</h3>
+        <p>Fast and responsive file transfer.</p>
+    </div>
+
+</section>
 
 </body>
 </html>

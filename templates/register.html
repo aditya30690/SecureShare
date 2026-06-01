@@ -1,45 +1,68 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
 
-    <title>Create Account</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | SecureShare</title>
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
-
 </head>
 
 <body>
 
-<div class="card">
+<div class="auth-container">
 
-    <h2>Create Account</h2>
+    <div class="auth-card">
 
-    <form action="/register" method="POST">
+        <div class="auth-logo">
+            ☁
+        </div>
 
-        <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            required>
+        <h1>Create Account</h1>
 
-        <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required>
+        <p>
+            Join SecureShare Cloud Platform
+        </p>
 
-        <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            required>
+        <form action="/register" method="POST">
 
-        <button type="submit">
-            Create Account
-        </button>
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required>
 
-    </form>
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required>
+
+            <button type="submit">
+                Create Account
+            </button>
+
+        </form>
+
+        <div class="auth-footer">
+
+            Already have an account?
+
+            <a href="/login">
+                Login
+            </a>
+
+        </div>
+
+    </div>
 
 </div>
 

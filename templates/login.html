@@ -1,39 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | SecureShare</title>
 
-<title>Login</title>
-
-<link rel="stylesheet"
-href="{{ url_for('static', filename='style.css') }}">
-
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-<div class="card">
+<div class="auth-container">
 
-<h2>Login</h2>
+    <div class="auth-card">
 
-<form action="/login" method="POST">
+        <div class="auth-logo">
+            ☁
+        </div>
 
-<input
-type="email"
-name="email"
-placeholder="Email"
-required>
+        <h1>Welcome Back</h1>
 
-<input
-type="password"
-name="password"
-placeholder="Password"
-required>
+        <p>
+            Login to access your cloud files securely
+        </p>
 
-<button type="submit">
-Login
-</button>
+        <form action="/login" method="POST">
 
-</form>
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required>
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <div class="auth-footer">
+
+            Don't have an account?
+
+            <a href="/register">
+                Register
+            </a>
+
+        </div>
+
+    </div>
 
 </div>
 
